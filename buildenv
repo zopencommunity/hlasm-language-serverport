@@ -1,5 +1,5 @@
 # bump: hlasm_language_server-version /HLASM_LANGUAGE_SERVER_VERSION="(.*)"/ https://github.com/eclipse-che4z/che-che4z-lsp-for-hlasm.git|semver:*
-HLASM_LANGUAGE_SERVER_VERSION="1.20.0"
+HLASM_LANGUAGE_SERVER_VERSION="1.21.0"
 
 ###
 ### Build control file for the hlasm_language_server port
