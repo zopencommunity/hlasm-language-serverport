@@ -1,0 +1,16 @@
+diff --git a/asio/include/asio/detail/socket_option.hpp b/asio/include/asio/detail/socket_option.hpp
+index 6f1c46b9..288bb601 100644
+--- a/asio/include/asio/detail/socket_option.hpp
++++ b/asio/include/asio/detail/socket_option.hpp
+@@ -69,6 +69,11 @@ public:
+     return !value_;
+   }
+ 
++#ifdef __MVS__
++// z/OS uses AF_INET6
++#define PF_INET6 AF_INET6
++#endif
++
+   // Get the level of the socket option.
+   template <typename Protocol>
+   int level(const Protocol&) const

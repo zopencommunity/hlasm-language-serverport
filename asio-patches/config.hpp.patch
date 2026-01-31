@@ -1,0 +1,15 @@
+diff --git a/asio/include/asio/detail/config.hpp b/asio/include/asio/detail/config.hpp
+index 44171c4b..bb41741f 100644
+--- a/asio/include/asio/detail/config.hpp
++++ b/asio/include/asio/detail/config.hpp
+@@ -1428,4 +1428,10 @@
+ # endif // !defined(ASIO_DISABLE_SNPRINTF)
+ #endif // !defined(ASIO_HAS_SNPRINTF)
+ 
++#ifdef __MVS__
++// same values were used while porting other projects
++#define NI_MAXSERV 32
++#define NI_MAXHOST 1025
++#endif
++
+ #endif // ASIO_DETAIL_CONFIG_HPP
